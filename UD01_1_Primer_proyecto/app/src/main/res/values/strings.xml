@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">UD01_1_Primer_proyecto</string>
+    <string name="list_wine">Lista de Licores</string>
+    <string name="search">Buscar</string>
+    <string-array name="list_type_wines">
+        <item>Blanco</item>
+        <item>Tinto</item>
+        <item>Rosado</item>
+    </string-array>
 </resources>

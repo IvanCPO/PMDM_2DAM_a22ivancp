@@ -1,20 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="30dp"
     >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hola jefecito "/>
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:text="@string/list_wine"
+        android:layout_marginBottom="15dp"
+        />
 
-    </Spinner>
+    <Spinner
+        android:id="@+id/wineType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:entries="@array/list_type_wines" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+
+        />
+
+    <TextView
+        android:id="@+id/textTypeWine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        />
 
 </LinearLayout>
