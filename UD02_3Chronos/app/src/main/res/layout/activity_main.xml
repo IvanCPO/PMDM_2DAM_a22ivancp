@@ -15,6 +15,29 @@
         android:textSize="56sp"
         />
 
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_pause"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pause"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_restart"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="@string/restart"
+        android:layout_margin="10dp"
+        />
 
 
 </LinearLayout>
