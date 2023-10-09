@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         chrono = findViewById<Chronometer>(R.id.chrono)
 
+
         if (savedInstanceState != null){
             offset= savedInstanceState.getLong(OFFSET_KEY)
             running= savedInstanceState.getBoolean(RUNNING_KEY)
@@ -59,10 +60,40 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStop() {
+        stopCrhono()
+        super.onStop()
+    }
+
+    override fun onRestart() {
+        startCrhono()
+        super.onRestart()
+
+    }
+
+    override fun onPause() {
+        stopCrhono()
+
+        super.onPause()
+    }
+
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putBoolean(RUNNING_KEY, running)
         outState.putLong(OFFSET_KEY, offset)
         outState.putLong(BASE_KEY, chrono.base)
         super.onSaveInstanceState(outState)
+    }
+    fun startCrhono(){
+        if (!running){
+            chrono.base = SystemClock.elapsedRealtime()-offset
+            chrono.start()
+        }
+    }
+
+    fun stopCrhono(){
+        if (running) {
+            offset = SystemClock.elapsedRealtime() - chrono.base
+            chrono.stop()
+        }
     }
 }
