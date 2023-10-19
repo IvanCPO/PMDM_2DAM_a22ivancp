@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
     <androidx.fragment.app.FragmentContainerView
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/fragment_container_view_1"
-        android:name="com.example.ud03_1_secret_message.WelcomeFragment"
-        />
+        android:layout_height="wrap_content"
 
+        android:name="com.example.ud03_1_secret_message_2.WelcomeFragment"
+        />
     <androidx.fragment.app.FragmentContainerView
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/fragment_container_view_2"
-        android:name="com.example.ud03_1_secret_message.WelcomeFragment"
+        android:layout_height="wrap_content"
+        android:name="com.example.ud03_1_secret_message_2.MessageFragment"
         />
-
-
 
 
 </LinearLayout>
