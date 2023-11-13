@@ -6,16 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.example.ud03_1_secret_message_2.databinding.FragmentEncryptBinding
+import com.example.ud03_1_secret_message_2.databinding.FragmentMessageBinding
 
 class EncryptFragment : Fragment() {
 
-
+    private var _binding: FragmentEncryptBinding? = null
+    private val binding get() =_binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val messageEcrypt = EncryptFragmentArgs.fromBundle(requireArguments()).message.uppercase()
-        val view = inflater.inflate(R.layout.fragment_encrypt, container, false)
+        _binding = FragmentEncryptBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        binding.buttonNect.setOnClickListener{
+
+            val messageEcrypt = EncryptFragmentArgs.fromBundle(requireArguments()).message.uppercase()
+        }
         view.findViewById<TextView>(R.id.encrypt_textValue).text = cifrado(messageEcrypt)
         return view
     }

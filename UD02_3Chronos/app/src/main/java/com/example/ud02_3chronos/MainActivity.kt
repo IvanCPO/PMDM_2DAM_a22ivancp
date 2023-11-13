@@ -1,8 +1,10 @@
 package com.example.ud02_3chronos
 
+import android.databinding.adapters.ActionMenuViewBindingAdapter
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
+import android.widget.ActionMenuView
 import android.widget.Button
 import android.widget.Chronometer
 
@@ -16,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val binding = ActionMenuView()
         setContentView(R.layout.activity_main)
         chrono = findViewById<Chronometer>(R.id.chrono)
 

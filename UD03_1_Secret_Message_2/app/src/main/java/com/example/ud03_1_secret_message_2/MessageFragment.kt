@@ -9,9 +9,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.navigation.findNavController
+import com.example.ud03_1_secret_message_2.databinding.FragmentMessageBinding
 
 class MessageFragment : Fragment() {
 
+    private var _binding: FragmentMessageBinding ? = null
+    private val binding get() =_binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
